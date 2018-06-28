@@ -12,21 +12,21 @@ handlePageClicks();
 
 
 function handlePageClicks(){
-	$('#workBtn').on('click', function(event){
+	$('#workBtn').on('click touchstart', function(event){
 		$('body').addClass('is-article-visible');
 		$('#work').removeClass('inactive');
 		$('#work').addClass('active');
 		listenForClickOutOfArticle(1);
 	})
 
-	$('#aboutMeBtn').on('click', function(event){
+	$('#aboutMeBtn').on('click touchstart', function(event){
 		$('body').addClass('is-article-visible');
 		$('#intro').removeClass('inactive');
 		$('#intro').addClass('active');
 		listenForClickOutOfArticle(0);
 	})
 
-	$('#contactBtn').on('click', function(event){
+	$('#contactBtn').on('click touchstart', function(event){
 		$('body').addClass('is-article-visible');
 		$('#contact').removeClass('inactive');
 		$('#contact').addClass('active');
@@ -43,6 +43,13 @@ function listenForClickOutOfArticle(i){
 
 	//when user clicks outside of current window close the window
 	window.onclick = function(event){
+		if(event.target == closeBtn){
+			$(modal).removeClass('active');
+			$(modal).addClass('inactive');
+			$('body').removeClass('is-article-visible')
+		}
+	}
+	window.touchstart = function(event){
 		if(event.target == closeBtn){
 			$(modal).removeClass('active');
 			$(modal).addClass('inactive');
