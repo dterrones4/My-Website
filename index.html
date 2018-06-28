@@ -9,10 +9,10 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<noscript><link rel="stylesheet" href="noscript.css" /></noscript>
 	</head>
-	<body class='is-article-visible'>
+	<body class=''>
 
 		<!-- Wrapper -->
-		<div id="bg">
+
 			<div id="wrapper">
 
 				<!-- Header -->
@@ -27,21 +27,35 @@
 						</div>
 						<nav>
 							<ul>
-								<li><a class='pageLinks' href="#intro">About Me</a></li>
-								<li><a class='pageLinks' href="#work">Work</a></li>
-								<li><a class='pageLinks' href="#contact">Contact</a></li>
-								<!--<li><a href="#elements">Elements</a></li>-->
+								<li><a class='pageLinks' id='aboutMeBtn' href="#intro">About Me</a></li>
+								<li><a class='pageLinks' id='workBtn' href="#work">Work</a></li>
+								<li><a class='pageLinks' id='contactBtn' href="#contact">Contact</a></li>
 							</ul>
 						</nav>
 					</header>
 					
 					<div id='main'>
+					<!-- Intro -->
+						<article class='inactive' id="intro">
+								<h2 class="major">About Me</h2>
+								<span class="image main"><img src="images/dan.jpg" alt="" /></span>
+								<p>I am a Web Developer from San Diego currently living in Texas. I am a lover of basketball, coffee, video games, traveling, music and camping. </p>
+								<p>My first exposure to coding was working at a small startup in San Diego. Our team was extremely small so everyone did a little bit of everyting, and even
+									though I had no business messing with the website I immediately fell in love with it. Since then I have strived to learn new technologies and skills from my humble
+									beginnings of editing simple HTML and CSS for minor deisgn changes. I love the challenge of working on new problems and the thrill you get when you finally solve that 
+									new problem. Feel free to contact me our browse some of my projects by folowing the links on the homepage.
+								</p>
+								<div class='close'></div>
+							</article>
+
 					<!-- Work -->
-						<article class='active' id="work">
+						<article class='inactive' id="work">
 							<h2 class="major">Work</h2>
 							<div class='project-container'>
 								<span class="image main"><img src="images/Motivatr Screenshot.jpg" alt="" /></span>
 								<h3 class='center'>MotivATR</h3>
+								<a href='https://github.com/dterrones4/MotivATR-Client' target="_blank">GitHub</a>
+								<a href='https://motivatr.netlify.com' target="_blank">Live App</a>
 								<i class="devicon-css3-plain"></i>
 								<i class="devicon-javascript-plain"></i>
 								<i class="devicon-mongodb-plain"></i>
@@ -56,6 +70,8 @@
 							<div class='project-container'>
 								<span class="image main"><img src="images/Date Night.png" alt="" /></span>
 								<h3 class='center'>Date Night</h3>
+								<a href='https://github.com/dterrones4/DateNight' target="_blank">GitHub</a>
+								<a href='https://dterrones4.github.io/DateNight' target="_blank">Live App</a>
 								<i class="devicon-css3-plain"></i>
 								<i class="devicon-javascript-plain"></i>
 								<i class="devicon-nodejs-plain"></i>
@@ -68,7 +84,8 @@
 							<div class='project-container'>
 								<span class="image main"><img src="images/Game Of Thrones.png" alt="" /></span>
 								<h3 class='center'>Game of Thrones Quiz</h3>
-								<h3 class='center'>Date Night</h3>
+								<a href='https://github.com/dterrones4/GameOfThrones-Quiz' target="_blank">GitHub</a>
+								<a href='https://dterrones4.github.io/GameOfThrones-Quiz' target="_blank">Live App</a>
 								<i class="devicon-css3-plain"></i>
 								<i class="devicon-javascript-plain"></i>
 								<i class="devicon-html5-plain"></i>
@@ -76,20 +93,58 @@
 									thrones knowledge. It isn't the most impressive app but it marks the beginning of my coding journey.
 								</p>
 							</div>
+							<div class='close'></div>
 							</article>
+
+						<!-- Contact -->
+							<article class='inactive' id="contact">
+								<h2 class="major">Contact</h2>
+								<form  id='gform'method="post" action="https://script.google.com/macros/s/AKfycbxjLTqiHBD0Y71tt9bJ4PlgkztE1IfvLFZ_goUKZRQrbaA2cn4/exec">
+									<div class="fields">
+										<div class="field half">
+											<label for="name">Name</label>
+											<input type="text" name="name" id="name" />
+										</div>
+										<div class="field half">
+											<label for="email">Email</label>
+											<input type="text" name="email" id="email" />
+										</div>
+										<div class="field">
+											<label for="message">Message</label>
+											<textarea name="message" id="message" rows="4"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" class="primary" /></li>
+										<li><input type="reset" value="Reset" /></li>
+									</ul>
+								</form>
+								<div style="display:none;" id="thankyou_message">
+									<h2><em>Thamks</em> for reaching out! I will get back to you soon!</h2>
+								</div>
+								<ul class="icons">
+									<li><a href="https://www.facebook.com/daniel.terrones.750" target="_blank" class="icon fa fa-facebook"><span class="label"></span></a></li>
+									<li><a href="https://www.instagram.com/danielterrones4/" target="_blank" class="icon fa fa-instagram"><span class="label"></span></a></li>
+									<li><a href="https://github.com/dterrones4" target="_blank" class="icon fa fa-github"><span class="label"></span></a></li>
+									<li><a href="https://www.linkedin.com/in/daniel-terrones-962a31149/" target="_blank" class="icon fa fa-linkedin"><span class="label"></span></a></li>
+								</ul>
+								<p>Feel free to email me directly at daniel@dterrones.com</p>
+								<div class='close'></div>
+							</article>
+
+
 						</div>
 
 					<footer id="footer">
-						<p class="copyright">&copy; Daniel Terrones Website</p>
+						<p class="copyright">&copy; Daniel Terrones' Website</p>
 					</footer>
 
 			</div>
-		</div>
+			<div id="bg"></div>
 
 		<!-- Scripts -->
+			<script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-			<script src="browser.js"></script>
-			<script src="breakpoints.js"></script>
 			<script src="main.js"></script>
 
 	</body>
