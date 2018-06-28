@@ -168,7 +168,7 @@ h1 {
 	text-transform: uppercase;
 	letter-spacing: 0.2rem;
 	font-size: 0.8rem;
-	line-height: 2;
+	line-height: 3;
 }
 
 #header nav ul {
@@ -203,6 +203,7 @@ a {
 #header nav ul li {
 	padding-left: 0;
 	border-left: solid 1px #ffffff;
+	text-align: center
 }
 
 #header nav ul li a:hover {
@@ -234,12 +235,6 @@ body.is-article-visible #header {
 			top: calc(-2rem - 1px);
 			height: calc(2rem + 1px);
 		}
-
-	#header .logo {
-		width: 4.75rem;
-		height: 4.75rem;
-		line-height: 4.75rem;
-	}
 
 		#header .logo .icon:before {
 			font-size: 1.75rem;
@@ -275,7 +270,7 @@ body.is-article-visible #header {
 		}
 
 			#header nav ul li {
-				border-left: 0;
+				padding-left: 0;
 				border-top: solid 1px #ffffff;
 			}
 
@@ -288,6 +283,7 @@ body.is-article-visible #header {
 					line-height: 3rem;
 					min-width: 0;
 					width: 100%;
+					padding: 0;
 				}
 
 		#header nav.use-middle:after {
